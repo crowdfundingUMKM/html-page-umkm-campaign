@@ -318,3 +318,17 @@
   }
 
 })();
+
+
+function togglePasswordVisibility(userNumber) {
+  const passwordInput = document.getElementById(`yourPassword${userNumber}`);
+  const showHideBtn = document.getElementById(`showHideBtn${userNumber}`);
+
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    showHideBtn.innerHTML = '<i class="bi bi-eye"></i>';
+  } else {
+    passwordInput.type = 'password';
+    showHideBtn.innerHTML = '<i class="bi bi-eye-slash"></i>';
+  }
+}

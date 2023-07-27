@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Pages / Register - NiceAdmin Bootstrap Template</title>
+  <title>Pages / Buat Akun - Crowdfunding UMKM </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -28,13 +28,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: NiceAdmin - v2.5.0
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -50,7 +43,7 @@
               <div class="d-flex justify-content-center py-4">
                 <a href="index.html" class="logo d-flex align-items-center w-auto">
                   <img src="assets/img/logo.png" alt="">
-                  <span class="d-none d-lg-block">NiceAdmin</span>
+                  <span class="d-none d-lg-block">Wellcome UMKM</span>
                 </a>
               </div><!-- End Logo -->
 
@@ -59,50 +52,71 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
-                    <p class="text-center small">Enter your personal details to create account</p>
+                    <h5 class="card-title text-center pb-0 fs-4">Buat Akun Anda</h5>
+                    <p class="text-center small">Berkontribusi dalam pertumbuhan UMKM di Indonesia.</p>
                   </div>
 
                   <form class="row g-3 needs-validation" novalidate>
                     <div class="col-12">
-                      <label for="yourName" class="form-label">Your Name</label>
+                      <label for="yourName" class="form-label">Nama Anda</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
-                      <div class="invalid-feedback">Please, enter your name!</div>
+                      <div class="invalid-feedback">Tolong, masukan nama anda!</div>
                     </div>
 
+                    
                     <div class="col-12">
-                      <label for="yourEmail" class="form-label">Your Email</label>
-                      <input type="email" name="email" class="form-control" id="yourEmail" required>
-                      <div class="invalid-feedback">Please enter a valid Email adddress!</div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="yourUsername" class="form-label">Username</label>
+                      <label for="yourPhone" class="form-label">Nomor Hp</label>
                       <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please choose a username.</div>
+                        <input
+                          type="text"
+                          name="phone"
+                          class="form-control"
+                          id="phone"
+                          required
+                          pattern="08[0-9]{8,}"
+                          oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+                          minlength="10"
+                        />
+                        <div class="invalid-feedback">Masukkan Nomor Hp yang valid (diawali dengan 08 dan minimal 10 angka)</div>
                       </div>
+                    </div>
+                    
+                    <div class="col-12">
+                      <label for="yourEmail" class="form-label">Email Anda</label>
+                      <input type="email" name="email" class="form-control" id="yourEmail" required>
+                      <div class="invalid-feedback">Tolong, masukan email yang valid!</div>
+                    </div>
+
+                    <!-- description user textarea-->
+                    <div class="col-12">
+                      <label for="yourDescription" class="form-label">Deskripsi</label>
+                      <textarea name="description" class="form-control" id="yourDescription" rows="3" required placeholder="Kenapa Mau Join"></textarea>
+                      <div class="invalid-feedback">Tolong, masukan deskripsi anda!</div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Please enter your password!</div>
+                      <div class="input-group has-validation">
+                        <div class="input-group-prepend">
+                          <button type="button" id="showHideBtn" onclick="togglePasswordVisibility(1)" class="btn btn-outline-secondary"><i class="bi bi-eye-slash"></i></button>
+                        </div>
+                        <input type="password" name="password" class="form-control" id="yourPassword1" required>
+                        <div class="invalid-feedback">Tolong, masukkan password anda!</div>
+                      </div>
                     </div>
 
                     <div class="col-12">
                       <div class="form-check">
                         <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
-                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
-                        <div class="invalid-feedback">You must agree before submitting.</div>
+                        <label class="form-check-label" for="acceptTerms">Saya setuju dan menerima <a href="#">syarat dan ketentuan</a></label>
+                        <div class="invalid-feedback">Anda harus setuju sebelum mengirimkan</div>
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Create Account</button>
+                      <button class="btn btn-primary w-100" type="submit">Buat Akun Sekarang</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Already have an account? <a href="pages-login.html">Log in</a></p>
+                      <p class="small mb-0">Sudah memiliki akun? <a href="pages-login.html">Log in</a></p>
                     </div>
                   </form>
 
@@ -110,11 +124,7 @@
               </div>
 
               <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+               Di kelola oleh <a href="">Ahmad Zaky</a>
               </div>
 
             </div>
