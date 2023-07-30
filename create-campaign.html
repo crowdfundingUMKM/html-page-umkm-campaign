@@ -463,6 +463,13 @@
                 </div>
 
                 <div class="row mb-3">
+                  <label for="categoryUMKM" class="col-sm-2 col-form-label">Kategori UMKM</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" required>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
                   <label for="inputDescription" class="col-sm-2 col-form-label">Deskripsi UMKM</label>
                   <div class="col-sm-10">
                     <textarea class="form-control" style="height: 150px" required></textarea>
@@ -494,13 +501,13 @@
                 <div class="input-group mb-3">
                   <label for="interestRate" class="col-sm-2 col-form-label">Suku Bunga (per tahun)</label>
                   <span class="input-group-text">%</span>
-                  <input type="number" class="form-control" placeholder="Jumlah suku bungan 15%" min="15" required>
+                  <input type="number" class="form-control" placeholder="Jumlah suku bungan 15%" max="15" required>
                 </div>
 
                 <div class="input-group mb-3">
                   <label for="moneyTarget" class="col-sm-2 col-form-label">Masa Tenor</label>
                   <span class="input-group-text">Bulan</span>
-                  <input type="number" class="form-control" placeholder="Jumlah bulan max 15" min="15" required>
+                  <input type="number" class="form-control" placeholder="Jumlah bulan max 24" max="24" required>
                 </div>
 
                 <div class="row mb-3">
