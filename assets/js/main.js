@@ -359,6 +359,18 @@ function validateMinInvest(input) {
 }
 // End Money
 
+// File Upload Validation (5 MB)
+function validateFileSize(inputFile) {
+  const maxFileSize = 5000000; // 5 MB dalam bytes
+  if (inputFile.files && inputFile.files[0]) {
+    const fileSize = inputFile.files[0].size;
+    if (fileSize > maxFileSize) {
+      alert("Ukuran file melebihi batas maksimal (5 MB).");
+      inputFile.value = ""; // Reset input file
+    }
+  }
+}
+
 
 function addBenefits() {
   var textarea = document.querySelector('textarea'); // Dapatkan textarea
