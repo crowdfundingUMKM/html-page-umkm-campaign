@@ -332,3 +332,146 @@ function togglePasswordVisibility(userNumber) {
     showHideBtn.innerHTML = '<i class="bi bi-eye-slash"></i>';
   }
 }
+
+// Money
+function formatCurrency(input) {
+  // Menghapus semua karakter selain angka (seperti titik, koma, dan spasi)
+  var value = input.value.replace(/[^\d]/g, '');
+
+  // Mengubah angka menjadi format ribuan (misalnya: 100000 menjadi 100.000)
+  value = new Intl.NumberFormat().format(value);
+
+  // Memasukkan angka yang telah diformat kembali ke dalam input
+  input.value = value;
+}
+
+
+function validateMinInvest(input) {
+  var value = input.value.replace(/[^\d]/g, ''); // Menghapus karakter selain angka
+  var numericValue = parseInt(value, 10); // Mengubah ke nilai angka
+
+  // Memastikan nilai numericValue tidak kurang dari 100000
+  if (numericValue < 100000) {
+    input.setCustomValidity('Minimal investasi adalah 100.000');
+  } else {
+    input.setCustomValidity(''); // Validasi berhasil, hapus pesan kesalahan
+  }
+}
+// End Money
+
+
+function addBenefits() {
+  var textarea = document.querySelector('textarea'); // Dapatkan textarea
+  var benefitList = document.getElementById('benefitList'); // Dapatkan ul element
+
+  // Split nilai dari textarea berdasarkan tanda koma (,) untuk mendapatkan tiap benefit
+  var benefits = textarea.value.split(',');
+
+  // Bersihkan daftar benefit sebelumnya (jika ada)
+  benefitList.innerHTML = '';
+
+  // Tambahkan setiap benefit sebagai elemen <li> ke dalam ul
+  benefits.forEach(function(benefit) {
+    var li = document.createElement('li');
+    li.textContent = benefit.trim(); // Membersihkan whitespace
+
+    // Tambahkan tombol "Hapus" untuk setiap benefit
+    var removeButton = document.createElement('button');
+    removeButton.textContent = 'Hapus';
+    removeButton.className = 'btn btn-sm btn-danger ml-2';
+    removeButton.onclick = function() {
+      removeBenefit(li); // Panggil fungsi removeBenefit saat tombol "Hapus" ditekan
+    };
+
+    li.appendChild(removeButton);
+    benefitList.appendChild(li);
+  });
+}
+
+function removeBenefit(benefitItem) {
+  var benefitList = document.getElementById('benefitList');
+  benefitList.removeChild(benefitItem);
+}
+
+// image preview
+let imageCount = 0;
+  let imageInputs = []; // Array untuk menyimpan data input tambahan
+
+  function addMoreImages() {
+    if (imageCount < 4) {
+      const imageUploadContainer = document.getElementById("imageUploadContainer");
+
+      const divRow = document.createElement("div");
+      divRow.classList.add("row", "mb-3");
+
+      const label = document.createElement("label");
+      label.classList.add("col-sm-2", "col-form-label");
+      label.textContent = `Foto UMKM ${imageCount + 2}`;
+
+      const divCol = document.createElement("div");
+      divCol.classList.add("col-sm-10");
+
+      const input = document.createElement("input");
+      input.classList.add("form-control");
+      input.type = "file";
+      input.accept = "image/*";
+      input.setAttribute("multiple", "");
+      input.setAttribute("data-id", imageCount); // Tambahkan atribut data-id untuk mengidentifikasi input
+
+      const smallText = document.createElement("small");
+      smallText.classList.add("text-muted");
+      smallText.textContent = "Unggah foto-foto UMKM. Anda dapat mengunggah multiple foto.";
+
+      const deleteButton = document.createElement("button"); // Tombol untuk menghapus input tambahan
+      deleteButton.textContent = "Hapus";
+      deleteButton.classList.add("btn", "btn-danger", "mx-2");
+      deleteButton.addEventListener("click", function() {
+        deleteImageInput(input);
+      });
+
+      divCol.appendChild(input);
+      divCol.appendChild(smallText);
+      divCol.appendChild(deleteButton);
+      divRow.appendChild(label);
+      divRow.appendChild(divCol);
+      imageUploadContainer.appendChild(divRow);
+
+      imageInputs.push(input); // Tambahkan input baru ke dalam array
+      imageCount++;
+    }
+  }
+
+function simpanGambar() {
+  // Simpan logika disini untuk mengirim data gambar ke server/database
+  // Contoh: dapat menggunakan AJAX untuk mengirim data gambar ke server
+
+  // Setelah menyimpan, kita bisa mengosongkan form dan menghapus input tambahan
+  resetInput();
+}
+
+function deleteImageInput(input) {
+  const id = input.getAttribute("data-id");
+  if (id !== null) {
+    const index = imageInputs.findIndex(item => item.getAttribute("data-id") === id);
+    if (index !== -1) {
+      imageInputs.splice(index, 1); // Hapus input dari array
+      const imageUploadContainer = document.getElementById("imageUploadContainer");
+      imageUploadContainer.removeChild(input.parentNode.parentNode); // Hapus elemen div yang berisi input
+      imageCount--;
+    }
+  }
+}
+
+function resetInput() {
+  // Mengosongkan form utama
+  document.getElementById("fotoUMKM").value = "";
+
+  // Menghapus input tambahan yang sudah ditambahkan
+  const imageUploadContainer = document.getElementById("imageUploadContainer");
+  while (imageUploadContainer.firstChild) {
+    imageUploadContainer.removeChild(imageUploadContainer.firstChild);
+  }
+
+  // Mereset kembali hitungan jumlah gambar
+  imageCount = 0;
+}
