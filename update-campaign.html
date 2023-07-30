@@ -435,12 +435,12 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Buat Campaign UMKM</h1>
+      <h1>Update Campaign UMKM</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item">Campaign UMKM</li>
-          <li class="breadcrumb-item active">Buat Campaign</li>
+          <li class="breadcrumb-item active">Update Campaign</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -451,35 +451,36 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Buat Campaign UMKM</h5>
+              <h5 class="card-title">Update Campaign UMKM</h5>
 
               <!-- General Form Elements -->
               <form>
                 <div class="row mb-3">
                   <label for="titleUMKM" class="col-sm-2 col-form-label">Judul UMKM</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" required>
+                    <input type="text" class="form-control" value="Wong Potato Pasar Malam Minggu" required>
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="categoryUMKM" class="col-sm-2 col-form-label">Kategori UMKM</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" required>
+                    <input type="text" class="form-control" value="Makanan dan Minuman" required>
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="inputDescription" class="col-sm-2 col-form-label">Deskripsi UMKM</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control" style="height: 150px" required></textarea>
+                    <textarea class="form-control" style="height: 150px" required>"Wong aPotato adalah brand ke-3 dari JP Group yang menggandeng salah satu influencer ternama Indonesia yaitu Baim Wong. Bermulla di awal September 2021 hingga September 2022. Wong Potato telah mencapai hampir 350 outlet, baik di Pulau Jawa maupun di luar Pulai Jawa. Hanya dengan Rp 12.000 sudah dapat menikmati crunchy dan gurihnya Wong Potato. Serta banyak varian rasa, membuat Wong Potato menjadi cemilan favorit di semua kalangan."
+                    </textarea>
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="inputAddress" class="col-sm-2 col-form-label">Alamat UMKM</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control" style="height: 100px" required></textarea>
+                    <textarea class="form-control" style="height: 100px" required>Jl. Hola Naim Saemple NO.12</textarea>
                   </div>
                 </div>
 
@@ -489,31 +490,31 @@
                 <div class="input-group mb-3">
                   <label for="moneyTarget" class="col-sm-2 col-form-label">Target Dana</label>
                   <span class="input-group-text">Rp.</span>
-                  <input type="text" class="form-control" placeholder="Masukkan Uang Rupiah" required oninput="formatCurrency(this)">
+                  <input type="text" class="form-control" placeholder="Masukkan Uang Rupiah" required oninput="formatCurrency(this)" value="100,000,000">
                 </div>
 
                 <div class="input-group mb-3">
                   <label for="minInvest" class="col-sm-2 col-form-label">Minimal invest</label>
                   <span class="input-group-text">Rp.</span>
-                  <input type="text" class="form-control" placeholder="Masukkan Uang Rupiah" required oninput="formatCurrency(this); validateMinInvest(this)">
+                  <input type="text" class="form-control" placeholder="Masukkan Uang Rupiah" required oninput="formatCurrency(this); validateMinInvest(this)" value="100,000">
                 </div>
 
                 <div class="input-group mb-3">
                   <label for="interestRate" class="col-sm-2 col-form-label">Suku Bunga (per tahun)</label>
                   <span class="input-group-text">%</span>
-                  <input type="number" class="form-control" placeholder="Jumlah suku bungan 15%" max="15" required>
+                  <input type="number" class="form-control" placeholder="Jumlah suku bungan 15%" max="15" required value="2">
                 </div>
 
                 <div class="input-group mb-3">
                   <label for="moneyTarget" class="col-sm-2 col-form-label">Masa Tenor</label>
                   <span class="input-group-text">Bulan</span>
-                  <input type="number" class="form-control" placeholder="Jumlah bulan max 24" max="24" required>
+                  <input type="number" class="form-control" placeholder="Jumlah bulan max 24" max="24" required value="12">
                 </div>
 
                 <div class="row mb-3">
                   <label for="inputDate" class="col-sm-2 col-form-label">Deadline Kampanye</label>
                   <div class="col-sm-10">
-                    <input type="date" class="form-control">
+                    <input type="date" class="form-control" value="2023-12-12">
                   </div>
                 </div>
 
@@ -530,15 +531,14 @@
                 <div class="row mb-3">
                   <label for="inputBenefit" class="col-sm-2 col-form-label">Benefit UMKM</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control" style="height: 100px" placeholder="Tambahkan menggunakan koma (,)" required></textarea>
+                    <textarea class="form-control" style="height: 100px" placeholder="Tambahkan menggunakan koma (,)" required>Ini benefit yang didaptkan, ini benefit yang didapatkan</textarea>
                   </div>
                 </div>
                 
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Simpan</label>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Simpan Campaign</button>
-                    <button type="reset" class="btn btn-danger">Reset</button>
+                    <button type="submit" class="btn btn-primary">Update Campaign</button>
                   </div>
                 </div>
 
@@ -575,6 +575,17 @@
                 <!-- Tempat untuk menampilkan input tambahan 4 gambar lagi -->
               </div>
             </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+                <!-- tombol prefiew UMKM -->
+                <h5 class="card-title">Preview Campaign</h5>
+                <p>Silakan lihat daftar UMKM yang sudah ada sekarang.</p>
+                <a href="#">
+                  <button class="btn btn-primary">Preview UMKM</button>
+                </a>
+              </div>
           </div>
 
 
