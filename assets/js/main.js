@@ -432,7 +432,7 @@ let imageCount = 0;
 
       const smallText = document.createElement("small");
       smallText.classList.add("text-muted");
-      smallText.textContent = "Unggah foto-foto UMKM. Anda dapat mengunggah multiple foto.";
+      smallText.textContent = "Unggah foto-foto UMKM.";
 
       const deleteButton = document.createElement("button"); // Tombol untuk menghapus input tambahan
       deleteButton.textContent = "Hapus";
