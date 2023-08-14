@@ -451,7 +451,16 @@
       <div class="alert alert-info alert-dismissible fade show" role="alert">
         <h5 class="alert-heading">Profit User Investor</h5>
         <p>
-          Profit yang diperoleh oleh user investor akan dielola oleh campaign atau proyek UMKM yang telah berhasil terdanai. Jika target tercapai dan sesuai dengan kesepakatan, admin Crowdfunding UMKM akan mencairkan dana investasi kepada user investor. Proses pencairan dana ini akan dilakukan secara transparan dan aman untuk memastikan bahwa investor mendapatkan keuntungan yang telah dijanjikan.</p>
+          Profit yang diperoleh oleh user investor akan dielola oleh campaign atau proyek UMKM yang telah berhasil terdanai. Jika target tercapai dan sesuai dengan kesepakatan, admin Crowdfunding UMKM akan mencairkan dana investasi kepada user investor. Proses pencairan dana ini akan dilakukan secara transparan dan aman untuk memastikan bahwa investor mendapatkan keuntungan yang telah dijanjikan.
+        </p>
+        <br>
+        <p>Informasi Status</p>
+        <ul>
+          <li><span class="badge bg-info">Waiting</span>: Menunggu proses dari admin apakah dana bisa di cairakan untuk user investor</li>
+          <li><span class="badge bg-success">Succses</span>: Dana sudah diterima oleh user investor</li>
+          <li><span class="badge bg-danger">Rejected</span>: Dana ditolak, adanya kemungkinan anda belum mengisi pembayaran yang seharusnya.</li>
+
+        </ul>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     </div>
@@ -475,8 +484,10 @@
                         <th scope="col">#</th>
                         <th scope="col">User Investor</th>
                         <th scope="col">Campign UMKM</th>
-                        <th scope="col">Profit User investor  <i class="bi bi-info-circle" data-toggle="tooltip" title="Informasi tentang profit user investor yang akan diterima"></i></th>
-                        <th scope="col">Request Penarikan <i class="bi bi-info-circle" data-toggle="tooltip" title="Informasi ini akan memberikan informasi kepada admin untuk mencairakan dana tersebut"></i></th>
+                        <th scope="col">Profit User investor  <i class="bi bi-info-circle" data-toggle="tooltip" title="Informasi mengenai keuntungan yang akan diterima oleh pengguna sebagai investor."></i></th>
+                        <th scope="col">Request Penarikan <i class="bi bi-info-circle" data-toggle="tooltip" title="Informasi ini bertujuan memberikan petunjuk kepada administrator mengenai proses pencairan dana yang telah terkumpul."></i></th>
+                      <!-- status request -->
+                      <th scope="col">Status Request <i class="bi bi-info-circle" data-toggle="tooltip" title="Informasi ini bertujuan memberikan petunjuk kepada administrator status mengenai proses pencairan dana untuk investor."></i></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -486,6 +497,7 @@
                         <td><a href="#" class="text-primary">Your Campaign</a></td>
                         <td>Rp.600.400</td>
                         <td><a href="#"><button class="btn btn-primary btn-sm">Request</button></a></td>
+                        <td><span class="badge bg-info">Waiting</span></td>
                       </tr>
                       <tr>
                         <th scope="row"><a href="#">#2049</a></th>
@@ -493,6 +505,7 @@
                         <td><a href="#" class="text-primary">Your Campaign</a></td>
                         <td>Rp.350.400</td>
                         <td><a href="#"><button class="btn btn-primary btn-sm">Request</button></a></td>
+                        <td><span class="badge bg-info">Waiting</span></td>
                       </tr>
                       <tr>
                         <th scope="row"><a href="#">#2644</a></th>
@@ -500,6 +513,7 @@
                         <td><a href="#" class="text-primary">Your Campaign</a></td>
                         <td>Rp.600.400</td>
                         <td><a href="#"><button class="btn btn-primary btn-sm">Request</button></a></td>
+                        <td><span class="badge bg-success">Succses</span></td>
                       </tr>
                       <tr>
                         <th scope="row"><a href="#">#2645</a></th>
@@ -508,6 +522,7 @@
                         <td>Rp.350.400</td>
                         <!-- if rejected . ditolak maka button tidak muncul -->
                         <td><a href="#"><button class="btn btn-primary btn-sm" >Request</button></a></td>
+                        <td><span class="badge bg-danger">Rejected</span></td>
                       </tr>
                     </tbody>
                   </table>

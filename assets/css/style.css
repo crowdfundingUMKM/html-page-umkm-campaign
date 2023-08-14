@@ -1258,3 +1258,11 @@ h6 {
   font-size: 13px;
   color: #012970;
 }
+
+/* disable button */
+.disabled-link {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #6c757d; /* Ubah warna sesuai keinginan Anda */
+}
