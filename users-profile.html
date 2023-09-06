@@ -221,125 +221,128 @@
     </header>
     <!-- End Header -->
 
-     <!-- ======= Sidebar ======= -->
+  <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
-
+  
       <li class="nav-item">
         <a class="nav-link collapsed" href="index.html">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
-
-      <!-- TIHIS my sidebar UP-->
-      <!-- List Camapign -->
-      <li class="nav-item list-campaign">
-        <a class="nav-link collapsed" data-bs-target="#list-campaign-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-bag"></i><span>Campaign UMKM</span><i class="bi bi-chevron-down ms-auto"></i>
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#make-campaign-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Campaign UMKM</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="list-campaign-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="make-campaign-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="list-campaign-umkm.html">
-              <i class="bi bi-circle"></i><span>List Campaign UMKM</span>
+            <a href="campaign-create.html" >
+              <i class="bi bi-circle"></i><span>Buat Campaign</span>
             </a>
           </li>
           <li>
-            <a href="my-invest-campaign.html">
-              <i class="bi bi-circle"></i><span>My Invest Campaign</span>
+            <a href="campaign-update.html" >
+              <i class="bi bi-circle"></i><span>Update Campaign</span>
+            </a>
+          </li>
+          <li>
+            <a href="campaign-preview.html" >
+              <i class="bi bi-circle"></i><span>Preview Campaign</span>
+            </a>
+          </li>
+          <li>
+            <a href="campaign-donation-fund.html" >
+              <i class="bi bi-circle"></i><span>Dana Donasi</span>
             </a>
           </li>
         </ul>
-      </li>
-      <!-- End List Camapign-->
-
-      <!-- Pembayaran Belum -->
-      <li class="nav-item transaction-error">
-        <a class="nav-link collapsed" data-bs-target="#payment-status" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-cash-stack"></i><span>Pembayaran</span><i class="bi bi-chevron-down ms-auto"></i>
+      </li><!-- End Components Nav -->
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#transaction-user" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Transaksi User</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="payment-status" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="transaction-user" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="pembayaran-sukses.html">
-              <i class="bi bi-circle"></i><span class="text-success">Pembayaran Sukses</span>
-            </a>
-          </li>
-          <li>
-            <a href="pembayaran-pending.html">
-              <i class="bi bi-circle"></i><span class="text-warning">Pembayaran Pending</span>
-            </a>
-          </li>
-          <li>
-            <a href="pembayaran-failure.html">
-              <i class="bi bi-circle"></i><span class=" text-danger">Pembayaran Batal</span>
+            <a href="transaction-user.html" >
+              <i class="bi bi-circle"></i><span>Transaksi User Investor</span>
             </a>
           </li>
         </ul>
-      </li>
-      <!-- End List Camapign-->
-      <!-- Histori Saya -->
-      <li class="nav-item transaksi">
-        <a class="nav-link collapsed" data-bs-target="#transaction-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-cash-stack"></i><span>Histori profit saya</span><i class="bi bi-chevron-down ms-auto"></i>
+      </li><!-- End Forms Nav -->
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#review-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Review Campaign</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="transaction-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          
+        <ul id="review-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="histori-penarikan.html">
-              <i class="bi bi-circle"></i><span>Histori Penarikan</span>
-            </a>
-          </li>
-          <li>
-            <a href="histori-penerimaan.html">
-              <i class="bi bi-circle"></i><span>Histori Penerimaan</span>
+            <a href="review-campaign.html" >
+              <i class="bi bi-circle"></i><span>Review Campaign</span>
             </a>
           </li>
         </ul>
-      </li>
-      <!-- Transaksi Saya -->
-
-
-      <!-- End this my sidabar UP -->
-
-
+      </li><!-- End Tables Nav -->
+  
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#profit-user" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-bar-chart"></i><span>Profit User</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="profit-user" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="profit-user-investor.html" >
+              <i class="bi bi-circle"></i><span>Profit User Investor</span>
+            </a>
+          </li>
+          <li>
+            <a href="profit-user-reviewer.html">
+              <i class="bi bi-circle"></i><span>Profit User Konsultan</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Charts Nav -->
+  
+  
       <li class="nav-heading">Pages</li>
-
+  
       <li class="nav-item">
         <a class="nav-link " href="users-profile.html">
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
       </li><!-- End Profile Page Nav -->
-
+  
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-faq.html">
           <i class="bi bi-question-circle"></i>
           <span>F.A.Q</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
-
-      <!-- Notif Admin -->
-    <li class="nav-item side-service">
-      <a class="nav-link collapsed" data-bs-target="#side-notif-admin" data-bs-toggle="collapse" href="#">
-        <i class="bi bi-app-indicator"></i><span>Notifikasi Admin</span><i class="bi bi-chevron-down ms-auto"></i>
-      </a>
-      <ul id="side-notif-admin" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-        <li>
-          <a href="pages-notif-admin.html" >
-            <i class="bi bi-circle"></i><span>Notif Admin</span>
-          </a>
-        </li>
-        <li>
-          <a href="pages-contact.html">
-            <i class="bi bi-circle"></i><span>Lapor Admin</span>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <!-- End Notif Admin-->
+  
+        <!-- Notif Admin -->
+      <li class="nav-item side-service">
+        <a class="nav-link collapsed" data-bs-target="#side-notif-admin" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-app-indicator"></i><span>Notifikasi Admin</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="side-notif-admin" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="pages-notif-admin.html" >
+              <i class="bi bi-circle"></i><span>Notif Admin</span>
+            </a>
+          </li>
+          <li>
+            <a href="pages-contact.html">
+              <i class="bi bi-circle"></i><span>Lapor Admin</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Notif Admin-->
     </ul>
-
+  
   </aside><!-- End Sidebar-->
 
     <main id="main" class="main">
