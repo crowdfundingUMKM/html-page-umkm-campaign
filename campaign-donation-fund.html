@@ -28,13 +28,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: NiceAdmin - v2.5.0
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -454,28 +447,84 @@
 
     <section class="section">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg">
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Example Card</h5>
-              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-lg-6">
-
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Example Card</h5>
-              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
+              <h5 class="card-title">Progress Dana Yang Sedang Dikumpulkan</h5>
+              <p>Berikut dana yang sudah terkumpul, anda bisa mengajukan requect kepada admin ketika progress sudah <strong class="text-primary">%100</strong></p>
+              <h4><strong>Terkumpul</strong></h4>
+              <div class="progress mt-3">
+                <div class="progress-bar progress-bar-striped bg-primary progress-bar-animated" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">%25</div>
+              </div>
+              <div class="row d-flex justify-content-between pt-2">
+                <div class="col-7">
+                  <h4>Rp.16.000.000 dari Rp.700.000</h4>
+                  </div>
+                <div class="col-3 col-lg-1 col-sm-1">
+                 <h4>%75</h4>
+                </div>
+              </div>
+              <!-- Ajukan Penarikan -->
+              <div class="d-grid gap-2 mt-3">
+                <button class="btn btn-primary" type="button">Ajukan Penarikan</button>
+                <!-- Jika Sudah mengajukan -->
+                <button class="btn btn-primary" type="button" disabled>Sudah Mengajukan</button>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
+      <!-- end progress -->
+      <div class="row">
+        <div class="col-lg">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Pengajuan yang dilakukan</h5>
+              <p>Berikut data yang sedang diajukan untuk proses penarikan dana, Request ini akan diterima oleh admin</p>
+              <!-- Table Status Penarikan -->
+              <!-- Table with hoverable rows -->
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nama Pemilik</th>
+                    <th scope="col">Nama Campaign</th>
+                    <th scope="col">Status Campaign</th>
+                    <th scope="col">Waktu Pengajuan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Brandon Jacob</td>
+                    <td>Penjualan Buah Naga</td>
+                    <td><span class="badge bg-danger">Ditolak</span></td>
+                    <td>2016-05-25</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Bridie Kessler</td>
+                    <td>Penjualan Buah Naga</td>
+                    <td><span class="badge bg-success">Disetujui</span></td>
+                    <td>2014-12-05</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Ashleigh Langosh</td>
+                    <td>Finance</td>
+                    <td><span class="badge bg-success">Disetujui</span></td>
+                    <td>2011-08-12</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End Table with hoverable rows -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end table pengajuan -->
     </section>
 
   </main><!-- End #main -->
