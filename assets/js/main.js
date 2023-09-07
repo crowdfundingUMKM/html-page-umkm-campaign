@@ -429,6 +429,8 @@ let imageCount = 0;
       input.accept = "image/*";
       input.setAttribute("multiple", "");
       input.setAttribute("data-id", imageCount); // Tambahkan atribut data-id untuk mengidentifikasi input
+      // add id input for image
+      input.id = `fotoUMKM${imageCount + 2}`;
 
       const smallText = document.createElement("small");
       smallText.classList.add("text-muted");
