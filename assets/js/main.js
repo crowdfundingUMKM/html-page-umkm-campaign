@@ -490,7 +490,7 @@ function resetInput() {
   imageCount = 0;
 }
 
-// // User Profile New and Re-enter password validation
+// User Profile New and Re-enter password validation
  // Menangkap elemen-elemen form
  var form = document.querySelector('.form-user-profile');
  var newPasswordInput = document.getElementById('newPassword');
