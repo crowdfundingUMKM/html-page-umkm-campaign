@@ -489,3 +489,29 @@ function resetInput() {
   // Mereset kembali hitungan jumlah gambar
   imageCount = 0;
 }
+
+// // User Profile New and Re-enter password validation
+ // Menangkap elemen-elemen form
+ var form = document.querySelector('.form-user-profile');
+ var newPasswordInput = document.getElementById('newPassword');
+ var renewPasswordInput = document.getElementById('renewPassword');
+ var passwordMismatchError = document.getElementById('passwordMismatchError');
+
+ // Menambahkan event listener ke form saat submit
+ form.addEventListener('submit', function(event) {
+   // Mengambil nilai dari kedua input
+   var newPassword = newPasswordInput.value;
+   var renewPassword = renewPasswordInput.value;
+
+   // Memeriksa apakah kedua nilai sama
+   if (newPassword !== renewPassword) {
+     // Jika tidak sama, menampilkan pesan kesalahan
+     newPasswordInput.classList.add('is-invalid'); // Menambahkan kelas Bootstrap is-invalid
+     passwordMismatchError.style.display = 'block';
+     event.preventDefault();
+   } else {
+     // Jika sama, sembunyikan pesan kesalahan (jika sebelumnya ditampilkan)
+     newPasswordInput.classList.remove('is-invalid'); // Menghapus kelas Bootstrap is-invalid
+     passwordMismatchError.style.display = 'none';
+   }
+ });
